@@ -1,0 +1,17 @@
+{
+    "name": "things-sunsama-sync",
+    "version": "1.0.0",
+    "description": "Sync Things todos with Sunsama via webhook",
+    "main": "index.ts",
+    "scripts": {
+        "sync": "bun run index.ts"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bun-types": "latest"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0"
+    }
+}
