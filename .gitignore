@@ -1,0 +1,34 @@
+# Ignore all .secret files
+*.secret
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore logs
+*.log
+
+# Ignore .env files
+.env
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Bun lockfile
+bun.lockb
+
+# Ignore build output
+dist/
+build/
+
+# Ignore coverage output
+coverage/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore the synced log file
+synced.log

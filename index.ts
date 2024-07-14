@@ -1,8 +1,20 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
 
-const WEBHOOK_URL = 'https://run.relay.app/api/v1/playbook/xxx/trigger/xxx';
 const SYNCED_LOG_PATH = join(process.cwd(), 'synced.log');
+const WEBHOOK_URL_PATH = join(process.cwd(), 'WEBHOOK_URL.secret');
+
+// Read the webhook URL from the secret file
+const getWebhookUrl = (): string => {
+  try {
+    return readFileSync(WEBHOOK_URL_PATH, 'utf-8').trim();
+  } catch (error) {
+    console.error('Error reading WEBHOOK_URL.secret:', error);
+    process.exit(1);
+  }
+};
+
+const WEBHOOK_URL = getWebhookUrl();
 
 // Execute the Things CLI command and get the JSON output
 const getThingsData = (): any[] => {
