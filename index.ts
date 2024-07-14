@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
 
-const WEBHOOK_URL = 'https://run.relay.app/api/v1/playbook/clylja0lo4hmc0oma2pg3dsol/trigger/fqHfkJjkMQJxlqM5JXcyJA';
+const WEBHOOK_URL = 'https://run.relay.app/api/v1/playbook/xxx/trigger/xxx';
 const SYNCED_LOG_PATH = join(process.cwd(), 'synced.log');
 
 // Execute the Things CLI command and get the JSON output
