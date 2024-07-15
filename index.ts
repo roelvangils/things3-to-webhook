@@ -19,7 +19,7 @@ const WEBHOOK_URL = getWebhookUrl();
 // Execute the Things CLI command and get the JSON output
 const getThingsData = (): any[] => {
   try {
-    const output = Bun.spawnSync(['things-cli', '--json', '-t', 'sunsama', 'todos'], {
+    const output = Bun.spawnSync(['things-cli', '--json', '-t', 'Sunsama', 'todos'], {
       stdout: 'pipe',
     });
     return JSON.parse(output.stdout.toString());
