@@ -96,7 +96,7 @@ const main = async () => {
 
   if (filteredData.length > 0) {
     await submitToWebhook(filteredData);
-    const updatedSyncedUUIDs = new Set([...syncedUUIDs, ...newUUIDs]);
+    const updatedSyncedUUIDs = new Set([...Array.from(syncedUUIDs), ...Array.from(newUUIDs)]);
     writeSyncedUUIDs(updatedSyncedUUIDs);
     console.log(`Synced ${filteredData.length} new todos`);
   } else {
