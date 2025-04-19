@@ -33,3 +33,6 @@ coverage/
 # Ignore the synced log file
 synced.log
 synced.log
+synced.log
+synced.old
+synced.log
